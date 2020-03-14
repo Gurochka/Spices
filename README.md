@@ -1,0 +1,2 @@
+# Spices
+React Example Project
