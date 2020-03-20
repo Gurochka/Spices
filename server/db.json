@@ -1,3 +1,221 @@
 {
-  "spices": []
+  "spices": [
+  {
+    "id": 0,
+    "title": "anise",
+    "src": "/src/public/images/spices/anise.svg",
+    "color": "#8a4325",
+    "amount": 5
+  },
+  {
+    "id": 1,
+    "title": "basil",
+    "src": "/src/public/images/spices/basil.svg",
+    "color": "#38876a",
+    "amount": 15
+  },
+  {
+    "id": 2,
+    "title": "bay leaf",
+    "src": "/src/public/images/spices/bay leaf.svg",
+    "color": "#56ac3a",
+    "amount": 15
+  },
+  {
+    "id": 3,
+    "title": "black pepper",
+    "src": "/src/public/images/spices/black pepper.png",
+    "color": "#171717",
+    "amount": 10
+  },
+  {
+    "id": 4,
+    "title": "chamomile",
+    "src": "/src/public/images/spices/chamomile.svg",
+    "color": "#d5d5d5",
+    "amount": 20
+  },
+  {
+    "id": 5,
+    "title": "chili",
+    "src": "/src/public/images/spices/chili.svg",
+    "color": "#d95354",
+    "amount": 5
+  },
+  {
+    "id": 6,
+    "title": "cinnamon",
+    "src": "/src/public/images/spices/cinnamon.svg",
+    "color": "#c06515",
+    "amount": 25
+  },
+  {
+    "id": 7,
+    "title": "cloves",
+    "src": "/src/public/images/spices/cloves.png",
+    "color": "#795548",
+    "amount": 5
+  },
+  {
+    "id": 8,
+    "title": "cumin",
+    "src": "/src/public/images/spices/cumin.png",
+    "color": "#bc8c64",
+    "amount": 5
+  },
+  {
+    "id": 9,
+    "title": "dill",
+    "src": "/src/public/images/spices/dill.svg",
+    "color": "#389a6b",
+    "amount": 25
+  },
+  {
+    "id": 10,
+    "title": "carrot",
+    "src": "/src/public/images/spices/carrot.svg",
+    "color": "#ff9801",
+    "amount": 15
+  },
+  {
+    "id": 11,
+    "title": "tomato",
+    "src": "/src/public/images/spices/tomato.svg",
+    "color": "#e64c3f",
+    "amount": 25
+  },
+  {
+    "id": 12,
+    "title": "fennel",
+    "src": "/src/public/images/spices/fennel.png",
+    "color": "#8cc86c",
+    "amount": 5
+  },
+  {
+    "id": 13,
+    "title": "garlic",
+    "src": "/src/public/images/spices/garlic.svg",
+    "color": "#e3e7e8",
+    "amount": 15
+  },
+  {
+    "id": 14,
+    "title": "ginger",
+    "src": "/src/public/images/spices/ginger.svg",
+    "color": "#fcb94e",
+    "amount": 15
+  },
+  {
+    "id": 15,
+    "title": "lemongrass",
+    "src": "/src/public/images/spices/lemongrass.svg",
+    "color": "#389a6b",
+    "amount": 5
+  },
+  {
+    "id": 16,
+    "title": "mint",
+    "src": "/src/public/images/spices/mint.svg",
+    "color": "#2f7652",
+    "amount": 25
+  },
+  {
+    "id": 17,
+    "title": "mustard",
+    "src": "/src/public/images/spices/mustard.svg",
+    "color": "#ffc15a",
+    "amount": 5
+  },
+  {
+    "id": 18,
+    "title": "nutmeg",
+    "src": "/src/public/images/spices/nutmeg.svg",
+    "color": "#8a4325",
+    "amount": 5
+  },
+  {
+    "id": 19,
+    "title": "onion",
+    "src": "/src/public/images/spices/onion.svg",
+    "color": "#ff9155",
+    "amount": 5
+  },
+  {
+    "id": 20,
+    "title": "oregano",
+    "src": "/src/public/images/spices/oregano.svg",
+    "color": "#77c974",
+    "amount": 5
+  },
+  {
+    "id": 21,
+    "title": "paprika",
+    "src": "/src/public/images/spices/paprika.svg",
+    "color": "#d95354",
+    "amount": 5
+  },
+  {
+    "id": 22,
+    "title": "parsley",
+    "src": "/src/public/images/spices/parsley.svg",
+    "color": "#78c3a5",
+    "amount": 5
+  },
+  {
+    "id": 23,
+    "title": "rosemary",
+    "src": "/src/public/images/spices/rosemary.svg",
+    "color": "#1c4d35",
+    "amount": 5
+  },
+  {
+    "id": 24,
+    "title": "saffron",
+    "src": "/src/public/images/spices/saffron.png",
+    "color": "#555065",
+    "amount": 5
+  },
+  {
+    "id": 25,
+    "title": "salt",
+    "src": "/src/public/images/spices/salt.svg",
+    "color": "#b0e7f8",
+    "amount": 5
+  },
+  {
+    "id": 26,
+    "title": "tamarind",
+    "src": "/src/public/images/spices/tamarind.png",
+    "color": "#5a4a32",
+    "amount": 5
+  },
+  {
+    "id": 27,
+    "title": "tarragon",
+    "src": "/src/public/images/spices/tarragon.png",
+    "color": "#8ecb6f",
+    "amount": 5
+  },
+  {
+    "id": 28,
+    "title": "thyme",
+    "src": "/src/public/images/spices/thyme.svg",
+    "color": "#b4dd7f",
+    "amount": 5
+  },
+  {
+    "id": 29,
+    "title": "tumeric",
+    "src": "/src/public/images/spices/turmeric root.png",
+    "color": "#c9c1a2",
+    "amount": 5
+  },
+  {
+    "id": 30,
+    "title": "vanilla",
+    "src": "/src/public/images/spices/vanilla.svg",
+    "color": "#ffbc49",
+    "amount": 5
+  }
+]
 }

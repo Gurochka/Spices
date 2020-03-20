@@ -1,0 +1,27 @@
+.coloured-slider{
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+
+  span{
+    opacity: 0.8;
+    border-right: 1px solid #ffffff66;
+    &:first-child{
+      border-radius: 1rem 0 0 1rem;
+    }
+    &:last-child{
+      border-radius: 0 1rem 1rem 0;
+      border-right: none;
+    }
+    &:only-child{
+      border-radius: 1rem;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
