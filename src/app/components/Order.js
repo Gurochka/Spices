@@ -10,7 +10,7 @@ class Order extends React.Component {
       {
         items.map(item => (
           <div key={item.id}>
-            <InputNumber value={item.amount} onChange={(amount) => this.props.onChangeAmount(item, amount)}/>
+            <InputNumber value={item.amount} onChange={(amount) => this.props.onChangeAmount(item, amount)} diff="5"/>
             <label>{item.title}</label> 
             <span className="color" style={{backgroundColor: item.color}}></span>            
           </div>

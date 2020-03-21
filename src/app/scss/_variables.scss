@@ -50,3 +50,13 @@ $text-light: #fff;
 $text-main: #707070;
 $text-muted: #888;
 $text-headers: #222;
+
+// Breakpoints
+
+$breakpoints: (
+    "phone":            576px,
+    "tablet-portrait":  768px,
+    "tablet-landscape": 1024px,
+    "desktop":          1200px,
+    "desktop-wide":     1440px
+);
