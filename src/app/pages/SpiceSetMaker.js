@@ -43,7 +43,7 @@ class SpiceSetMaker extends React.Component {
         <h1 className="text-center"> Make your own spice set </h1>
         <h4 className="text-center text-gray-500">Pick up to 10 spices in one set</h4>
         <Slider data={ selected } />
-        <p>Total weight of your set: {weight} (grams)</p>
+        <p><b>Total weight of your set:</b> {weight} grams, {selected.length} picked {selected.length == 10 && '(maximum)'}</p>
         <Order data={ selected } onChangeAmount={this.onChangeAmount}/>
 
         <ProductList data={this.state.spices} onClick={this.onPickSpice}/>
