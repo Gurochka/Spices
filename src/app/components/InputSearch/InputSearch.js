@@ -1,6 +1,6 @@
 import React from 'react'
 import './InputSearch.scss'
-import IconSearch from './images/IconSearch'
+import IconSearch from 'App/components/images/IconSearch'
 
 class InputSearch extends React.Component {
   onInputHandler = (e) => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Order.scss'
-import InputNumber from 'App/components/InputNumber.js'
+import InputNumber from 'App/components/InputNumber/InputNumber'
 
 export default function Order(props){
   const items = props.data

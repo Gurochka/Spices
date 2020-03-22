@@ -1,8 +1,8 @@
 import React from 'react'
-import ProductList from 'App/components/ProductList'
-import Slider from 'App/components/Slider'
-import Order from 'App/components/Order'
-import InputSearch from 'App/components/InputSearch'
+import ProductList from 'App/components/ProductList/ProductList'
+import Slider from 'App/components/Slider/Slider'
+import Order from 'App/components/Order/Order'
+import InputSearch from 'App/components/InputSearch/InputSearch'
 
 class SpiceSetMaker extends React.Component {
   state = {

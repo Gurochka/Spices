@@ -1,5 +1,5 @@
-@import "../scss/variables";
-@import "../scss/mixins";
+@import "~App/scss/variables";
+@import "~App/scss/mixins";
 
 .product{
   @include flex-container($direction: column, $align-items: center);

@@ -1,4 +1,4 @@
-@import "../scss/mixins";
+@import "~App/scss/mixins";
 
 .product-list{
   @include flex-container($wrap: wrap, $align-content: center, $justify: space-around);

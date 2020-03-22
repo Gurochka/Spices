@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from 'App/components/Product'
+import Product from 'App/components/Product/Product'
 import './ProductList.scss'
 
 export default function ProductList(props){
