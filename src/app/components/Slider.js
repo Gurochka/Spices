@@ -2,11 +2,12 @@ import React from 'react'
 import './Slider.scss'
 
 class Slider extends React.Component {
-  sliderContent = []
+  sliderContent = {}
 
   componentDidUpdate(prevProps) {
     if (prevProps.data != this.props.data){
-      this.sliderContent.forEach(el => {
+      Object.keys(this.sliderContent).forEach(id => {
+        let el = this.sliderContent[id];
         if (el && (el.offsetHeight < el.scrollHeight || el.offsetWidth < el.scrollWidth)){
           el.innerHTML = '';
         }

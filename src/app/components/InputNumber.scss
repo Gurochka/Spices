@@ -7,12 +7,6 @@
     padding: 0 0.7rem;
     transition: all 200ms;
 
-    &:first-child{
-      border-radius: 5px 0 0 5px;
-    }
-    &:last-child{
-      border-radius: 0 5px 5px 0;
-    }
     &:hover{
       background-color: $gray-200;
       cursor: pointer;

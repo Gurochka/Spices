@@ -2,12 +2,23 @@ import React from 'react'
 import ProductList from 'App/components/ProductList'
 import Slider from 'App/components/Slider'
 import Order from 'App/components/Order'
+import InputSearch from 'App/components/InputSearch'
 
 class SpiceSetMaker extends React.Component {
   state = {
-    spices: []
+    spices: [],
+    search: ''
   }
 
+  componentDidMount(){
+    fetch('http://localhost:3000/spices')
+      .then(res => res.json())
+      .then(res => {
+        [0,5,8,18,23].forEach(n => res[n].checked = true)
+        this.setState({spices: res})
+      })
+  }
+  
   onChangeAmount = (item, amount) => {
     item.amount = amount;
     this.setState({
@@ -25,16 +36,12 @@ class SpiceSetMaker extends React.Component {
     })
   }
 
-  componentDidMount(){
-    fetch('http://localhost:3000/spices')
-      .then(res => res.json())
-      .then(res => {
-        [0,5,8,18,23].forEach(n => res[n].checked = true)
-        this.setState({spices: res})
-      })
+  onSearchHandler = (value) => {
+    this.setState({search: value})
   }
 
   render(){
+    const filtered = this.state.spices.filter(s => !this.state.search || s.title.search(this.state.search) != -1)
     const selected = this.state.spices.filter(s => s.checked) || [];
     const weight = selected.reduce((acc, item) => (acc + item.amount), 0)
 
@@ -46,7 +53,9 @@ class SpiceSetMaker extends React.Component {
         <p><b>Total weight of your set:</b> {weight} grams, {selected.length} picked {selected.length == 10 && '(maximum)'}</p>
         <Order data={ selected } onChangeAmount={this.onChangeAmount}/>
 
-        <ProductList data={this.state.spices} onClick={this.onPickSpice}/>
+        <InputSearch placeholder="Search through spices" onChange={this.onSearchHandler} />
+
+        <ProductList data={filtered} onClick={this.onPickSpice}/>
       </div>
     )
   }

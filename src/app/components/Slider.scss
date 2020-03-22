@@ -1,7 +1,6 @@
 .coloured-slider{
   width: 100%;
   height: 1.5rem;
-  border-radius: 5px;
   display: flex;
   color: white;
   font-size: 0.9em;
@@ -10,6 +9,7 @@
   span{
     opacity: 0.8;
     border-right: 1px solid #ffffff66;
+    padding: 0 0.2rem;
     
     &:first-child{
       border-radius: 1rem 0 0 1rem;
