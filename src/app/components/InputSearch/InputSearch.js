@@ -1,6 +1,6 @@
 import React from 'react'
 import './InputSearch.scss'
-import IconSearch from 'App/components/images/IconSearch'
+import SVG from 'react-inlinesvg'
 
 class InputSearch extends React.Component {
   onInputHandler = (e) => {
@@ -11,7 +11,7 @@ class InputSearch extends React.Component {
     return  (
       <div className="search-field">
         <input type="text" placeholder={this.props.placeholder} onChange={this.onInputHandler} />
-        <IconSearch />
+        <SVG src="/src/public/images/search-solid.svg" />
       </div>  
     )
   }

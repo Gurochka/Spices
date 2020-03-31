@@ -1,6 +1,6 @@
 import React from 'react'
 import './Product.scss'
-import IconCheck from 'App/components/images/IconCheck.js'
+import SVG from 'react-inlinesvg'
 
 export default function Product(props){
   const { item } = props;
@@ -10,7 +10,7 @@ export default function Product(props){
       {
         item.checked && (
           <div className="selected">
-            <IconCheck />
+            <SVG src="/src/public/images/check-double-solid.svg" />
           </div>
       )}
       <img src={item.src} />

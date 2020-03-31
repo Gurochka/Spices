@@ -1,7 +1,6 @@
 import React from 'react'
 import './InputNumber.scss'
-import IconMinus from 'App/components/images/IconMinus.js'
-import IconPlus from 'App/components/images/IconPlus.js'
+import SVG from 'react-inlinesvg'
 
 class Order extends React.Component {
   onChangeAmount(diff){
@@ -22,11 +21,11 @@ class Order extends React.Component {
     return  (
       <div className="input-number">
         <div onClick={() => this.onChangeAmount(-diff)}>
-          <IconMinus />
+          <SVG src="/src/public/images/minus-solid.svg" />
         </div>
         <input value={this.props.value} onChange={this.onInputHandler} type="text"/>
         <div onClick={() => this.onChangeAmount(diff)}>
-          <IconPlus />
+          <SVG src="/src/public/images/plus-solid.svg" />
         </div>
       </div>
     )
