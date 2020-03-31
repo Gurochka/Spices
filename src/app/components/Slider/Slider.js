@@ -6,24 +6,25 @@ class Slider extends React.Component {
 
   isOutOfBoundaries = el => el.offsetHeight < el.scrollHeight || el.offsetWidth < el.scrollWidth
 
+  toggleTitleIfOverflow = (el, id) => {
+    if (!el) return
+
+    if (el.innerHTML && this.isOutOfBoundaries(el)){
+      el.innerHTML = '';
+    }
+    if (!el.innerHTML){
+      let data = this.props.data.find(d => d.id == id)
+
+      el.innerHTML = data.title;
+      if (this.isOutOfBoundaries(el)){
+        el.innerHTML = ''
+      }
+    }
+  }
+
   componentDidUpdate(prevProps) {
     if (prevProps.data != this.props.data){
-      Object.keys(this.sliderContent).forEach(id => {
-        let el = this.sliderContent[id]
-        if (!el) return
-
-        if (el.innerHTML && this.isOutOfBoundaries(el)){
-          el.innerHTML = '';
-        }
-        if (!el.innerHTML){
-          let data = this.props.data.find(d => d.id == id)
-
-          el.innerHTML = data.title;
-          if (this.isOutOfBoundaries(el)){
-            el.innerHTML = ''
-          }
-        }
-      })
+      Object.keys(this.sliderContent).forEach(id => this.toggleTitleIfOverflow(this.sliderContent[id], id))
     }
   }
 
