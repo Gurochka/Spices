@@ -4,12 +4,24 @@ import './Slider.scss'
 class Slider extends React.Component {
   sliderContent = {}
 
+  isOutOfBoundaries = el => el.offsetHeight < el.scrollHeight || el.offsetWidth < el.scrollWidth
+
   componentDidUpdate(prevProps) {
     if (prevProps.data != this.props.data){
       Object.keys(this.sliderContent).forEach(id => {
-        let el = this.sliderContent[id];
-        if (el && (el.offsetHeight < el.scrollHeight || el.offsetWidth < el.scrollWidth)){
+        let el = this.sliderContent[id]
+        if (!el) return
+
+        if (el.innerHTML && this.isOutOfBoundaries(el)){
           el.innerHTML = '';
+        }
+        if (!el.innerHTML){
+          let data = this.props.data.find(d => d.id == id)
+
+          el.innerHTML = data.title;
+          if (this.isOutOfBoundaries(el)){
+            el.innerHTML = ''
+          }
         }
       })
     }
