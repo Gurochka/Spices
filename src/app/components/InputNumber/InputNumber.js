@@ -19,11 +19,11 @@ class Order extends React.Component {
   render(){
     const diff = parseInt(this.props.diff || 1, 10)
     return  (
-      <div className="input-number">
+      <div className="input-number d-flex">
         <div onClick={() => this.onChangeAmount(-diff)}>
           <SVG src="/src/public/images/minus-solid.svg" />
         </div>
-        <input value={this.props.value} onChange={this.onInputHandler} type="text"/>
+        <input value={this.props.value} onChange={this.onInputHandler} type="text" className="form-control"/>
         <div onClick={() => this.onChangeAmount(diff)}>
           <SVG src="/src/public/images/plus-solid.svg" />
         </div>

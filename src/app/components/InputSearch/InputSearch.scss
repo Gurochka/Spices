@@ -2,13 +2,6 @@
 @import "~App/scss/mixins";
 
 .search-field{
-  display: flex;
-  input{
-    width: 100%;
-    padding: 0.5rem 1rem;
-    font-size: 0.9em;
-    border: 1px solid $gray-200;
-  }
   svg{
     width: 1rem;
     margin-left: -2rem;

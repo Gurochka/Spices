@@ -38,7 +38,7 @@ class Slider extends React.Component {
     })
 
     return  items.length > 0 && (
-      <div className="coloured-slider">
+      <div className="coloured-slider d-flex">
         { items }
       </div>
     )

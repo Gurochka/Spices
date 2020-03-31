@@ -9,8 +9,8 @@ class InputSearch extends React.Component {
 
   render(){
     return  (
-      <div className="search-field">
-        <input type="text" placeholder={this.props.placeholder} onChange={this.onInputHandler} />
+      <div className="search-field d-flex">
+        <input type="text" placeholder={this.props.placeholder} onChange={this.onInputHandler} className="form-control"/>
         <SVG src="/src/public/images/search-solid.svg" />
       </div>  
     )

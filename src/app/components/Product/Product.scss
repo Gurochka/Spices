@@ -16,7 +16,7 @@
 
   &:hover{
     cursor: pointer;
-    background-color: $gray-100;
+    background-color: $gray-200;
   }
   .selected{
     @include absolute($top: 0.5rem, $left: 0.5rem);
