@@ -24,20 +24,12 @@ $grays: (
 );
 
 // Color palette
-$default-color: #fff;
-$primary-color: #f91942; // vivid pink
-$secondary-color: #f9f9f9; // light gray
-$tertiary-color: rgba(249,25,66, 0.06); // light pink
-
 $success-color: #19b453; // main green
 $info-color: #56b0ee;   // main blue
 $warning-color: #fcb53f; 
-$danger-color: $primary-color;
+$danger-color: #f91942;
 
 $theme-colors: (
-    "primary":    $primary-color,
-    "secondary":  $secondary-color,
-    "tertiary":   $tertiary-color,
     "success":    $success-color,
     "info":       $info-color,
     "warning":    $warning-color,
@@ -49,7 +41,6 @@ $theme-colors: (
 $text-light: #fff;
 $text-main: #707070;
 $text-muted: #888;
-$text-headers: #222;
 
 // Breakpoints
 

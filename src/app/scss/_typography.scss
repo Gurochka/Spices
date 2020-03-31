@@ -1,4 +1,3 @@
-@use "sass:list";
 // REM sizes for media requests
 html{
   font-size: 12px;
@@ -15,19 +14,6 @@ html{
   @include media("desktop-wide"){
     font-size: 16px;
     line-height: 28px;    
-  }
-}
-
-// Text colors
-@each $color-name, $color in $theme-colors {
-  .text-#{$color-name}{
-    color: $color;
-  }
-}
-// Background colors
-@each $color-name, $color in $theme-colors {
-  .bg-#{$color-name}{
-    background-color: $color !important;
   }
 }
 
