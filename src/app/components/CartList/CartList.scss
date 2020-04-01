@@ -1,0 +1,15 @@
+@import "~App/scss/mixins";
+@import "~App/scss/variables";
+
+.cart-item{
+  .cart-header{
+    @include flex-container($align-content: center, $justify: space-between);
+    background-color: $gray-200;
+  }
+  .cart-body{
+    li{
+      @include flex-container($align-content: center, $justify: space-between);
+    }
+
+  }
+}

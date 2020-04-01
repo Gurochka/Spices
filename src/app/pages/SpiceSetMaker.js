@@ -8,13 +8,14 @@ import InputSearch from 'App/components/InputSearch/InputSearch'
 class SpiceSetMaker extends React.Component {
   state = {
     spices: [],
-    orders: [],
+    cart: [],
     search: ''
   }
 
   maximumSpices = 15
 
   componentDidMount(){
+    
     fetch('http://localhost:3000/spices')
       .then(res => res.json())
       .then(res => {
@@ -22,10 +23,10 @@ class SpiceSetMaker extends React.Component {
         this.setState({spices: res})
       })
 
-    fetch('http://localhost:3000/orders')
+    fetch('http://localhost:3000/cart')
       .then(res => res.json())
       .then(res => {
-        this.setState({ orders: res})
+        this.setState({ cart: res})
       })  
   }
   
@@ -59,7 +60,7 @@ class SpiceSetMaker extends React.Component {
       }
     })
 
-    fetch('http://localhost:3000/orders', {
+    fetch('http://localhost:3000/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -70,8 +71,8 @@ class SpiceSetMaker extends React.Component {
     }).then(res => {
       let spices = [...this.state.spices]
       spices.forEach(s => s.checked = false)
-      let orders = [...this.state.orders, res]
-      this.setState({ spices, orders })
+      let cart = [...this.state.cart, res]
+      this.setState({ spices, cart })
     })
   }
 
@@ -81,7 +82,7 @@ class SpiceSetMaker extends React.Component {
 
     return  (
       <div className="container relative">
-        <HeaderCart total={this.state.orders.length}/>
+        <HeaderCart total={this.state.cart.length}/>
         <h1 className="text-center"> Make your own spice set </h1>
         <h4 className="text-center text-gray-500">Pick up to 10 spices in one set</h4>
         <Slider data={ selected } />
