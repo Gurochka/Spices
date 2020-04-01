@@ -15,6 +15,10 @@ export default function Product(props){
       )}
       <img src={item.src} />
       {item.title}
+      <div className="price ">
+        <b>{item.price}$</b>
+        <small className="text-gray-500">/100g</small>
+      </div>
     </div>
   )
 }
