@@ -22,7 +22,7 @@ export default function Order(props){
       </div>
       <p><b>Total weight of your set:</b> {weight} grams, {items.length} picked {items.length == props.max && '(maximum)'}</p>
       <p><b>Total amount:</b> {total} $</p>      
-      <button>Send to cart</button>
+      <button onClick={props.onCreate}>Send to cart</button>
     </div>
   )
 }

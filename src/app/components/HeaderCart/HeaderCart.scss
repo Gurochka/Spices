@@ -1,0 +1,24 @@
+@import "~App/scss/mixins";
+@import "~App/scss/variables";
+
+.header-cart{
+  @include absolute($top: 0, $right: 0.5rem);
+  color: $text-main;
+  svg{
+    width: 2rem;
+    height: 2rem;
+  }
+  .badge{
+    @include absolute($top: -0.5rem, $right: -1rem);
+    background-color: red;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    font-size: 12px;
+    background-color: #f38a00;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+  }
+}
