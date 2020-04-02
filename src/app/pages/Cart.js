@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartList from 'App/components/CartList/CartList'
+import Loader from 'App/components/Loader/Loader'
 
 class Cart extends React.Component {
   state = {
     spices: [],
+    loading: true,
     cart: []
   }
 
@@ -19,12 +21,14 @@ class Cart extends React.Component {
         item.spices[spice_id] = spice;
       })
     })
-    this.setState({cart})   
+    console.log('set state&')
+    this.setState({cart, loading: false})
   }
 
   onRemoveCartItem = (item) => {
+    this.setState({loading: true})
     fetch(`http://localhost:3000/cart/${item.id}`, { method: 'DELETE' })
-      .then(res => this.setState({cart: [...this.state.cart].filter(o => o.id != item.id)}))
+      .then(res => this.setState({loading: false, cart: [...this.state.cart].filter(o => o.id != item.id)}))
   }
 
   componentDidMount(){
@@ -42,7 +46,10 @@ class Cart extends React.Component {
       <div className="container">
         <Link to="/">back to mixer</Link>
         <h1 className="text-center">Your order</h1>
-        <CartList cart={this.state.cart} onRemove={this.onRemoveCartItem}/>
+        <div className="relative">
+          <Loader loading={this.state.loading}/>
+          <CartList cart={this.state.cart} onRemove={this.onRemoveCartItem}/>
+        </div>
       </div>
     )
   }
