@@ -28,3 +28,11 @@ html{
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 .text-left   { text-align: left; }
+
+a{
+  color: $primary-color;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}

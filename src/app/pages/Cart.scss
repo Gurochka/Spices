@@ -1,0 +1,17 @@
+@import "~App/scss/mixins";
+@import "~App/scss/variables";
+
+.page-cart{
+  h1{
+    position: relative;
+    a {
+      @include absolute($top: 0, $left: 0.5rem); 
+      font-size: 0.7em;
+    }
+  }
+}
+.back-btn{
+  width: 1rem;
+  height: 1rem;
+  transform: scaleX(-1);
+}

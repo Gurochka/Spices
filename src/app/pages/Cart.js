@@ -1,5 +1,8 @@
+import './Cart.scss'
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+import SVG from 'react-inlinesvg'
 import CartList from 'App/components/Cart/CartList/CartList'
 import Loader from 'App/components/UI/Loader/Loader'
 
@@ -21,7 +24,6 @@ class Cart extends React.Component {
         item.spices[spice_id] = spice;
       })
     })
-    console.log('set state&')
     this.setState({cart, loading: false})
   }
 
@@ -43,12 +45,14 @@ class Cart extends React.Component {
 
   render(){
     return  (
-      <div className="container">
-        <Link to="/">back to mixer</Link>
-        <h1 className="text-center">Your order</h1>
+      <div className="container page-cart">
+        <h1 className="text-center my-5">
+          <Link to="/"> <SVG className="back-btn" src="/src/public/images/share-solid.svg" /> back </Link>
+          Your order
+        </h1>
         <div className="relative">
-          <Loader loading={this.state.loading}/>
-          <CartList cart={this.state.cart} onRemove={this.onRemoveCartItem}/>
+          <Loader loading={this.state.loading} />
+          <CartList loading={this.state.loading} cart={this.state.cart} onRemove={this.onRemoveCartItem}/>
         </div>
       </div>
     )

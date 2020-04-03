@@ -81,7 +81,7 @@ class SpiceSetMaker extends React.Component {
     const selected = this.state.spices.filter(s => s.checked) || [];
 
     return  (
-      <div className="container relative">
+      <div className="container relative mb-5">
         <HeaderCart total={this.state.cart.length}/>
         <h1 className="text-center"> Make your own spice set </h1>
         <h4 className="text-center text-gray-500">Pick up to 10 spices in one set</h4>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Order.scss'
-import InputNumber from 'App/components/InputNumber/InputNumber'
+import InputNumber from 'App/components/UI/InputNumber/InputNumber'
 
 export default function Order(props){
   const items = props.data
@@ -22,7 +22,7 @@ export default function Order(props){
       </div>
       <p><b>Total weight of your set:</b> {weight} grams, {items.length} picked {items.length == props.max && '(maximum)'}</p>
       <p><b>Total amount:</b> {total} $</p>      
-      <button onClick={props.onCreate}>Send to cart</button>
+      <button className="btn btn-primary" onClick={props.onCreate}>Send to cart</button>
     </div>
   )
 }
