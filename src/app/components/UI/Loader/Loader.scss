@@ -20,7 +20,7 @@
     @include absolute($top: 50%, $right: 50%);
     svg{
       width: 3rem;
-      color: $primary-color;
+      color: $secondary-color;
       animation: spinner 2s linear infinite;
     }
   }

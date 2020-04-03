@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import CartList from 'App/components/CartList/CartList'
-import Loader from 'App/components/Loader/Loader'
+import CartList from 'App/components/Cart/CartList/CartList'
+import Loader from 'App/components/UI/Loader/Loader'
 
 class Cart extends React.Component {
   state = {
